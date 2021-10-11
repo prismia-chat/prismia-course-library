@@ -8,7 +8,7 @@ end
 
 function mixtureplot(X₁,X₂,μ₀,Σ₀,μ₁,Σ₁,Π=nothing)
     scatter(X₁,X₂;fillalpha=0.5,markerstrokewidth=0.5,
-        marker_z=Π,mc=ColorGradient([:lightblue,:orange]),
+        marker_z=Π,mc=cgrad([:lightblue,:orange]),
         colorbar=:false)
     ellipse!(μ₀,Σ₀,fillcolor=:lightblue)
     ellipse!(μ₁,Σ₁,fillcolor=:orange)
